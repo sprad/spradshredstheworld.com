@@ -21,6 +21,7 @@ group :development, :test do
 end
 
 group :test do
+  gem "database_cleaner"
   gem "rails-controller-testing"
   gem "rspec-collection_matchers"
   gem "shoulda-matchers"
