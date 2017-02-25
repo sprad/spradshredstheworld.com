@@ -5,12 +5,19 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem "coffee-rails", "~> 4.2"
+group :assets, :development, :test do
+  gem "bourbon"
+  gem "jquery-rails"
+  gem "neat"
+  gem "normalize-rails"
+  gem "refills"
+  gem "sass-rails", "~> 5.0"
+  gem "uglifier", ">= 1.3.0"
+end
+
 gem "pg"
 gem "puma", "~> 3.0"
 gem "rails", "~> 5.0.1"
-gem "sass-rails", "~> 5.0"
-gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
   gem "bundler-audit"
